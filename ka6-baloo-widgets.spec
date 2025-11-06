@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		baloo-widgets
 Summary:	Baloo widgets
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	5d171b5d82c5b14fe12cfb0d987a584a
+# Source0-md5:	fb9c55c5c194029a4a0cfc8ed20961d2
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel >= 5.11.1
@@ -88,10 +88,10 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/baloo_filemetadata_temp_extractor
-%attr(755,root,root) %{_libdir}/libKF6BalooWidgets.so.*.*
+%{_libdir}/libKF6BalooWidgets.so.*.*
 %ghost %{_libdir}/libKF6BalooWidgets.so.6
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kfileitemaction/tagsfileitemaction.so
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/propertiesdialog/baloofilepropertiesplugin.so
+%{_libdir}/qt6/plugins/kf6/kfileitemaction/tagsfileitemaction.so
+%{_libdir}/qt6/plugins/kf6/propertiesdialog/baloofilepropertiesplugin.so
 %{_datadir}/qlogging-categories6/baloo-widgets.categories
 
 %files devel
