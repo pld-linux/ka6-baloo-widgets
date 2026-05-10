@@ -6,6 +6,7 @@
 %define		qtver		5.15.2
 %define		kaname		baloo-widgets
 Summary:	Baloo widgets
+Summary(pl.UTF-8): Widżety Baloo
 Name:		ka6-%{kaname}
 Version:	26.04.1
 Release:	1
